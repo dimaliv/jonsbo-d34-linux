@@ -1,4 +1,4 @@
 # Development only; the service has no third-party runtime dependencies.
-ruff==0.12.12
+ruff==0.16.5
 build==1.3.0
 setuptools==80.9.0
