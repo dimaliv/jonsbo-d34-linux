@@ -1,0 +1,17 @@
+name: Hardware compatibility report
+description: Share results from a different panel or system.
+body:
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware and OS
+      description: Exact case/panel model, USB ID/descriptor, CPU/GPU and Linux distribution.
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Observed results
+      description: Which fields render correctly? Any blinking? Describe tested intervals and reconnect behavior.
+    validations:
+      required: true

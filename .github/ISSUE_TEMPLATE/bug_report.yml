@@ -1,0 +1,23 @@
+name: Bug report
+description: Report a service, sensor or display problem.
+body:
+  - type: textarea
+    id: setup
+    attributes:
+      label: Hardware and software
+      description: Case/panel, USB ID, CPU, GPU, OS, kernel, Python and project version.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+      description: Include steps to reproduce and what is visible on the physical panel.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Diagnostics and service log
+      description: Paste --diagnose output and relevant journalctl --user -u jonsbo-d34.service lines.
+      render: text

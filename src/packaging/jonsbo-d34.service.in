@@ -1,0 +1,16 @@
+[Unit]
+Description=Jonsbo D34 clock and CPU/GPU sensor display
+
+[Service]
+Type=simple
+Environment=UPDATE_INTERVAL=0.2 CPU_FREQ_INTERVAL=1
+EnvironmentFile=@CONFIG@
+ExecStart=@PYTHON@ @APP@ --interval ${UPDATE_INTERVAL} --cpu-freq-interval ${CPU_FREQ_INTERVAL}
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=5
+NoNewPrivileges=yes
+UMask=0077
+
+[Install]
+WantedBy=default.target

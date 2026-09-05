@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jonsbo-d34"
+version = "0.1.0"
+description = "A lightweight Linux USB HID service for the Jonsbo D34 status panel"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Jonsbo D34 contributors"}]
+keywords = ["jonsbo", "d34", "linux", "steamos", "hid", "hardware-monitoring"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: No Input/Output (Daemon)",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: System :: Hardware",
+]
+dependencies = []
+
+[project.scripts]
+jonsbo-d34 = "jonsbo_d34.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["jonsbo_d34*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
